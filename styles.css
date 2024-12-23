@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative; /* Position relative to allow absolute positioning of the overlay */
+    background: url('images/Nairobi/Big_five_gam.jpg') no-repeat center center/cover;
+    color: #f50606; /* Text color */
+    padding: 180px 0;
+    text-align: center;
+}
+
+.hero::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely within the hero section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure the overlay is above the background but below the text */
+}
+
+.hero h2 {
+    font-size: 3em; /* Increase font size for more dominance */
+    position: relative; /* Position relative to ensure it appears above the overlay */
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.hero p {
+    font-size: 1.5em; /* Increase font size for the paragraph */
+    position: relative; /* Position relative to ensure it appears above the overlay */
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+.cta-button {
+    background: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .destinations, .contact {
+    padding: 50px 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about h2, .destinations h2 , .contact h2 {
+    margin-bottom: 20px;
+}
+
+.destination-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns:repeat(2, 2fr); /* Create two equal columns */
+  gap: 20px; /* Space between the grid items */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+.card {
+  overflow: hidden; /* Ensure that the image does not overflow the card */
+  position: relative; /* Position relative to allow absolute positioning of child elements */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  border: 1px solid #ccc; /* Optional: Add a border to the card */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  width: 580px; /* Make the card full width of the grid cell */
+  display: flex;
+}
+
+.card img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: 300px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Scale the image up to 110% on hover */
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+}
+
+.destination-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.contact{
+    display:none;
+}
+
+
+
+footer {
+    background-color: #f7f5f0;
+    color: #333;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  footer .newsletter {
+    text-align: center;
+    background-color: #fbe8d4;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  footer .newsletter p {
+    margin: 0 0 10px;
+  }
+  
+  footer .newsletter button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  footer .contact-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  footer .actions button {
+    background-color: #0056b3;
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer .contacts {
+    margin: 10px 0;
+  }
+  
+  footer .contacts p {
+    margin: 5px 0;
+  }
+  
+  footer .payments img {
+    width: 50px;
+    margin: 5px;
+  }
+  
+  footer .footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  footer .footer-links div {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  footer .footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer .footer-links ul li a {
+    text-decoration: none;
+    color: #0056b3;
+  }
+  
+  footer .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,1); /* Fully black background */
+    padding-top: 60px;
+}
+
+.modal-content {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+}
+
+.modal-content img {
+  width: 100%; /* Make the image take the full width of the modal */
+  height: 450px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-bottom: 15px; /* Space between image and description */
+}
+
+.modal-description {
+  font-size: 1em; /* Set font size for the description */
+  color: #fc4343; /* Set text color */
+  padding: 0 15px; /* Add some padding for better spacing */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .destination-list {
+      grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Two columns with a minimum width */
+  }
+}
+
+@media (max-width: 767px) {
+  .destination-list {
+      grid-template-columns: 1fr; /* One column on smaller screens */
+  }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff; /* White background for the modal content */
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px; /* Padding inside the modal */
+    border: 1px solid #888; /* Border around the modal */
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Width of the modal */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.modal-content h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.modal-content label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Margin for spacing */
+    font-weight: bold; /* Bold labels */
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.modal-content button {
+    background-color: #28a745; /* Green background for submit button */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.modal-content button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.close {
+    color: #aaa; /* Light gray for close button */
+    float: right; /* Float to the right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Dark color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Modal Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background: #fff;
+  margin: 10% auto; /* Center the modal */
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Payment Method Styling */
+.payment-method {
+  font-family: Arial, sans-serif;
+}
+
+.payment-method h3 {
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.payment-option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.payment-option .icon {
+  width: 24px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.card-details {
+  margin-left: 30px;
+  display: none; /* Hidden by default */
+}
+
+.card-details input {
+  display: block;
+  margin: 5px 0;
+  padding: 5px;
+  width: calc(100% - 10px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment-option input[type="radio"]:checked + label + .card-details {
+  display: block; /* Show when selected */
+}
+
